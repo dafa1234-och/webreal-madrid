@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Madrid CF</title>
+
+  <style>
+    /* ---- STYLE UMUM ---- */
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(120deg, #ffffff, #e6e9ff);
+      color: #222;
+      transition: 0.3s;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 20px;
+      background: linear-gradient(135deg, #00529F, #0a1a40);
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 42px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* ---- NAVBAR ---- */
+    nav {
+      background: #0052a0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      padding: 10px 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 14px 22px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav button:hover,
+    nav button.active-tab {
+      background: #002a54;
+      border-radius: 8px;
+    }
+
+    /* ---- HALAMAN (SECTION) ---- */
+    section {
+      display: none;
+      padding: 45px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 0.7s ease;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---- CARD STYLE ---- */
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    ul li {
+      background: white;
+      margin: 10px 0;
+      padding: 12px 18px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    ul li:hover {
+      transform: scale(1.03);
+      background: #f7f9ff;
+    }
+
+    /* ---- GALERI ---- */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.07);
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      text-align: center;
+      background: #0a1a40;
+      color: white;
+      padding: 18px;
+      margin-top: 40px;
+      box-shadow: 0 -4px 8px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>REAL MADRID CF</h1>
+    <p>Klub Sepak Bola Terbesar di Dunia</p>
+  </header>
+
+  <nav>
+    <button onclick="showPage('home')" class="active-tab">Home</button>
+    <button onclick="showPage('sejarah')">Sejarah</button>
+    <button onclick="showPage('pemain')">Pemain</button>
+    <button onclick="showPage('prestasi')">Prestasi</button>
+    <button onclick="showPage('galeri')">Galeri</button>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="active">
+    <h2>Selamat Datang di Situs Real Madrid</h2>
+    <p>
+      Real Madrid Club de Fútbol adalah klub sepak bola profesional asal Madrid, Spanyol.
+      Didirikan pada tahun 1902, klub ini dikenal sebagai salah satu yang paling sukses di dunia.
+    </p>
+    <img src="logo.png" width="200">
+  </section>
+
+  <!-- SEJARAH -->
+  <section id="sejarah">
+    <h2>Sejarah Real Madrid</h2>
+    <p>
+      Real Madrid didirikan pada tahun 1902 oleh sekelompok penggemar sepak bola di Madrid.
+      Klub ini menjadi simbol kebanggaan Spanyol dan dikenal dengan warna putih khasnya.
+      Sejak awal berdirinya, Real Madrid sudah memenangkan banyak gelar domestik dan internasional.
+    </p>
+  </section>
+
+  <!-- PEMAIN -->
+  <section id="pemain">
+    <h2>Daftar Pemain Real Madrid</h2>
+    <ul>
+      <li>Thibaut Courtois – Kiper</li>
+      <li>Dani Carvajal – Bek</li>
+      <li>Éder Militão – Bek</li>
+      <li>Jude Bellingham – Gelandang</li>
+      <li>Vinícius Jr. – Penyerang</li>
+      <li>Rodrygo Goes – Penyerang</li>
+    </ul>
+  </section>
+
+  <!-- PRESTASI -->
+  <section id="prestasi">
+    <h2>Prestasi Real Madrid</h2>
+    <ul>
+      <li>🏆 15x Juara Liga Champions UEFA</li>
+      <li>🏆 35x Juara La Liga Spanyol</li>
+      <li>🏆 20x Copa del Rey</li>
+      <li>🏆 5x Piala Dunia Antarklub FIFA</li>
+    </ul>
+  </section>
+
+  <!-- GALERI -->
+  <section id="galeri">
+    <h2>Galeri Real Madrid</h2>
+    <div class="gallery">
+      <img src="bernabeu.jpg">
+      <img src="juara.jpg">
+      <img src="tim.jpg">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Real Madrid Fan Page | Dibuat Oleh Dafa
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll("section");
+      const buttons = document.querySelectorAll("nav button");
+
+      pages.forEach(p => p.classList.remove("active"));
+      document.getElementById(pageId).classList.add("active");
+
+      buttons.forEach(btn => btn.classList.remove("active-tab"));
+      event.target.classList.add("active-tab");
+    }
+  </script>
+
+</body>
+</html>
